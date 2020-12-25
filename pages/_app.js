@@ -16,11 +16,11 @@ function MyApp({ Component, pageProps }) {
     if (localStorage.getItem("myPokemon"))
       setMyPokemon(JSON.parse(localStorage.getItem("myPokemon")));
   }, []);
-  
+
   return (
     <ApolloProvider client={client}>
-      <Navbar />
       <Context.Provider value={providerValue}>
+        <Navbar />
         <Component {...pageProps} />
       </Context.Provider>
     </ApolloProvider>

@@ -1,7 +1,9 @@
 import dynamic from "next/dynamic";
 import { useQuery } from "@apollo/client";
 import { useEffect, useState } from "react";
+import { useBottomScrollListener } from "react-bottom-scroll-listener";
 import { GET_POKEMONS } from "../apollo/query/GET_POKEMONS";
+import { Loading } from "../components";
 
 const Main = dynamic(import("../components/Main"));
 const Pokemons = dynamic(import("../Content/Pokemons"));
@@ -15,29 +17,20 @@ export default function Home() {
     variables: { limit: variables.limit, offset: variables.offset },
   });
 
-  useEffect(() => {
-    window.onscroll = function (ev) {
-      if (
-        window.innerHeight + window.pageYOffset >=
-        document.body.offsetHeight
-      ) {
-        setLoading(true);
-        fetchMore({
-          variables: {
-            limit: variables.limit,
-            offset: variables.offset + variables.limit + 1,
-          },
-        }).then(() => {
-          setVariables({
-            ...variables,
-            offset: variables.offset + variables.limit + 1,
-          });
-        });
-      }
-    };
-
-    return () => (window.onscroll = null);
-  }, [variables]);
+  useBottomScrollListener(() => {
+    setLoading(true);
+    fetchMore({
+      variables: {
+        limit: variables.limit,
+        offset: variables.offset + variables.limit + 1,
+      },
+    }).then(() => {
+      setVariables({
+        ...variables,
+        offset: variables.offset + variables.limit + 1,
+      });
+    });
+  });
 
   useEffect(() => {
     if (data) {
@@ -46,13 +39,12 @@ export default function Home() {
     }
   }, [data]);
 
-  if (loading) return <div>loading...</div>;
   return (
     <Main>
-      {pokemons.length &&
-        pokemons.map((x) => {
-          return <Pokemons key={x.id} data={x} />;
-        })}
+      {loading && <Loading />}
+      {pokemons?.map((x) => {
+        return <Pokemons key={x.id} data={x} />;
+      })}
     </Main>
   );
 }

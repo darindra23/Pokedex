@@ -25,9 +25,19 @@ const Chip = styled.span`
       ? "#41584b"
       : props.type === "fairy"
       ? "#ff9b93"
+      : props.type === "fighting"
+      ? "#222831"
+      : props.type === "psychic"
+      ? "#6a097d"
+      : props.type === "rock"
+      ? "#555555"
+      : props.type === "ghost"
+      ? "#aaaaaa"
+      : props.type === "ice"
+      ? "#a6f6f1"
       : props.backgroundColor
       ? props.backgroundColor
-      : "white"};
+      : "#7d0633"};
   color: ${(props) => (props.color ? props.color : "black")};
   width: ${(props) => (props.width ? props.width : "3.5rem")};
   padding: ${(props) => (props.padding ? props.padding : "0.25rem 0")};

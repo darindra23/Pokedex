@@ -13,6 +13,7 @@ const Card = styled.div`
   background-position: right;
   background-color: white;
   cursor: pointer;
+  max-height: 6.3rem;
 `;
 
 export default Card;

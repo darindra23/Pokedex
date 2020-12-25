@@ -11,6 +11,30 @@ a {
   text-decoration: none;
 }
 
+#swal2-content {
+  text-transform: capitalize;
+}
+
+.swal2-confirm {
+  box-shadow: none !important;
+}
+
+.swal2-input-label {
+  margin: 0 !important;
+}
+
+.swal2-actions {
+  margin: 0 !important;
+}
+
+#swal2-title {
+  text-transform: capitalize !important;
+}
+
+#swal2-input {
+  box-shadow: none !important;
+}
+
 * {
   box-sizing: border-box;
 }
