@@ -39,7 +39,7 @@ export default function Pokemons({ data, index }) {
   }, []);
 
   const removePokemon = async () => {
-    const agree = await Swal.fire({
+    const confirmation = await Swal.fire({
       title: `Are you sure?`,
       text: `${data.nickname} Would be released.`,
       icon: "warning",
@@ -49,8 +49,8 @@ export default function Pokemons({ data, index }) {
       confirmButtonText: "Yes",
     });
 
-    if (agree) {
-      const newPokemon = myPokemon.splice(index, 0);
+    if (confirmation.isConfirmed) {
+      const newPokemon = myPokemon.filter((x) => x.nickname !== data.nickname);
       setMyPokemon(newPokemon);
       localStorage.setItem("myPokemon", JSON.stringify(newPokemon));
       Toast.fire({
