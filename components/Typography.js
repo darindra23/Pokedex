@@ -16,6 +16,9 @@ const Typography = styled.p`
       : "1rem"};
   text-transform: ${(props) => props.title && "capitalize"};
   text-align: ${(props) => props.align};
+  text-decoration: ${(props) => props.active && "underline"};
+  text-decoration-color: #c22a19;
+  cursor: ${(props) => props.isNav && "pointer"};
 `;
 
 export default Typography;

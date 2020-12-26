@@ -12,8 +12,10 @@ export default function NavbarCategory() {
       <Typography
         onClick={() => router.push("/")}
         title="true"
+        isNav="true"
         size="medium"
         color="white"
+        active={router.pathname === "/"}
       >
         Pokédex
       </Typography>
@@ -23,7 +25,13 @@ export default function NavbarCategory() {
         justifyContent="center"
         alignItems="center"
       >
-        <Typography title="true" size="medium" color="white">
+        <Typography
+          title="true"
+          isNav="true"
+          size="medium"
+          color="white"
+          active={router.pathname === "/my-pokemon"}
+        >
           My Pokémon
         </Typography>
         {myPokemon.length ? <Notifikasi>{myPokemon.length}</Notifikasi> : null}

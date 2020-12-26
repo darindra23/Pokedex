@@ -29,6 +29,7 @@ a {
 
 #swal2-title {
   text-transform: capitalize !important;
+  margin: 0;
 }
 
 #swal2-input {

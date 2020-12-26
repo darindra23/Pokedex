@@ -16,7 +16,8 @@ const Notifikasi = styled.span`
   -moz-transform: translate(30%, -8%);
   -ms-transform: translate(30%, -8%);
   transform: translate(30%, -8%);
-  margin: -1rem 0rem 0 -1.5rem;
+  margin: ${(props) => (props.margin ? props.margin : "-1rem 0rem 0 -1.5rem")};
+  cursor: ${(props) => props.clickable && "pointer"};
 `;
 
 export default Notifikasi;

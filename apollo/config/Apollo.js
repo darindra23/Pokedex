@@ -1,4 +1,5 @@
 import { ApolloClient, InMemoryCache } from "@apollo/client";
+import _ from "lodash";
 
 export const client = new ApolloClient({
   uri: "https://graphql-pokeapi.vercel.app/api/graphql",
@@ -12,7 +13,10 @@ export const client = new ApolloClient({
               return existing
                 ? {
                     ...existing,
-                    results: [...existing.results, ...incoming.results],
+                    results: _.uniqWith(
+                      [...existing.results, ...incoming.results],
+                      _.isEqual
+                    ),
                   }
                 : incoming;
             },

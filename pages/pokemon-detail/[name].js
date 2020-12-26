@@ -60,7 +60,7 @@ export default function PokemonDetail() {
           "myPokemon",
           JSON.stringify([...myPokemon, myPokemonData])
         );
-        router.push("/");
+        router.push("/my-pokemon");
         Toast.fire({
           icon: "success",
           title: `${value} succesfully added.`,

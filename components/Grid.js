@@ -11,5 +11,6 @@ const Grid = styled.div`
     props.backgroundColor ? props.backgroundColor : null};
   width: ${(props) => (props.width ? props.width : null)};
   margin: ${(props) => (props.margin ? props.margin : null)};
+  min-height: ${(props) => props.empty && "60vh"};
 `;
 export default Grid;

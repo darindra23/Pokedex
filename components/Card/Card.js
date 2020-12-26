@@ -12,7 +12,7 @@ const Card = styled.div`
   background-size: contain;
   background-position: right;
   background-color: white;
-  cursor: pointer;
+  cursor: ${(props) => props.clickable && "pointer"};
   max-height: 6.3rem;
 `;
 
