@@ -2,7 +2,7 @@ import dynamic from "next/dynamic";
 
 const PokemonCard = dynamic(import("../../components/Card/Pokemon-Card"));
 const PokemonTitle = dynamic(import("./Title"));
-const PokemonType = dynamic(import("./Title"));
+const PokemonType = dynamic(import("./Type"));
 const PokemonStat = dynamic(import("./Stat"));
 const PokemonMoves = dynamic(import("./Moves"));
 
