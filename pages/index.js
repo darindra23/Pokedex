@@ -1,10 +1,11 @@
+import dynamic from "next/dynamic";
 import { useQuery } from "@apollo/client";
 import { useBottomScrollListener } from "react-bottom-scroll-listener";
 import { GET_POKEMONS } from "../apollo/query/GET_POKEMONS";
 import { Loading } from "../components";
 
-import Main from "../components/Main";
-import Pokemons from "../Content/Pokemons";
+const Main = dynamic(import("../components/Main"));
+const Pokemons = dynamic(import("../Content/Pokemons"));
 
 export default function Home() {
   const { loading, data, fetchMore } = useQuery(GET_POKEMONS, {

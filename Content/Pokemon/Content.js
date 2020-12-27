@@ -1,8 +1,10 @@
-import { PokemonCard } from "../../components";
-import PokemonTitle from "./Title";
-import PokemonType from "./Type";
-import PokemonStat from "./Stat";
-import PokemonMoves from "./Moves";
+import dynamic from "next/dynamic";
+
+const PokemonCard = dynamic(import("../../components/Card/Pokemon-Card"));
+const PokemonTitle = dynamic(import("./Title"));
+const PokemonType = dynamic(import("./Title"));
+const PokemonStat = dynamic(import("./Stat"));
+const PokemonMoves = dynamic(import("./Moves"));
 
 export default function PokemonContent(props) {
   return (
