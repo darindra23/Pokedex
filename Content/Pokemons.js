@@ -27,7 +27,7 @@ const Toast = Swal.mixin({
   },
 });
 
-export default function Pokemons({ data, index }) {
+export default function Pokemons({ data }) {
   const router = useRouter();
   const { myPokemon, setMyPokemon } = useContext(Context);
   const [loadData, { data: pokemon }] = useLazyQuery(GET_POKEMON, {
@@ -108,6 +108,7 @@ export default function Pokemons({ data, index }) {
         </CardContent>
         <img
           alt="pokemon"
+          loading="lazy"
           key={data.id || data.nickname}
           src={data.image}
           height={100}
