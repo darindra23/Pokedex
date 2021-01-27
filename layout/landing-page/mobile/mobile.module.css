@@ -1,0 +1,22 @@
+.main {
+  position: relative;
+  min-height: 88vh;
+  max-width: 1920px;
+  margin: 0px auto;
+}
+
+.image_wrapper {
+  display: flex;
+  margin-top: 3.45rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.info_container {
+  display: flex;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 0.5rem;
+}

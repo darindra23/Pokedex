@@ -1,0 +1,35 @@
+.container {
+  padding: 5px 15px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  background-color: #8fba2a;
+  padding: 20px;
+  width: 100%;
+}
+
+.image_wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 17px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.subtitle {
+  font-size: 12px;
+}
+
+.chevron_wrapper {
+  display: flex;
+  flex-direction: row;
+  font-size: 12px;
+  text-decoration: none;
+}

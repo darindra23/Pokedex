@@ -1,0 +1,26 @@
+.container {
+  background-color: #1c1c1c;
+  color: #658517;
+  padding: 5vw 0;
+  font-size: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.desktop {
+  padding: 13px 0px;
+  font-size: 13px;
+  justify-content: center;
+}
+
+.text {
+  margin: 0;
+  cursor: pointer;
+  margin-left: 0px;
+}
+
+.text_desktop {
+  margin-left: 50px;
+}

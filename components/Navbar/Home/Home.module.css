@@ -1,0 +1,34 @@
+.appbar {
+  background-color: white;
+}
+
+.toolbar {
+  background-color: #fafafa;
+  padding: 0px 100px !important;
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar,
+.onlyLogo {
+  align-items: center;
+}
+
+.image {
+  align-self: center;
+  cursor: pointer;
+}
+
+.link {
+  margin-right: 20px;
+  font-size: 15px;
+  cursor: pointer;
+  color: black;
+}
+
+.link_wrapper {
+  display: flex;
+  color: black;
+  align-items: center;
+  margin-top: 0;
+}

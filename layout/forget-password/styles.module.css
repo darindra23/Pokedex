@@ -1,0 +1,29 @@
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  padding: 0rem 1.5rem 3.5rem;
+}
+
+.form_wrapper {
+  display: flex;
+  width: 400px;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 1.25rem;
+  color: #91c640;
+  margin: 1rem 0 0;
+}
+
+.button {
+  margin: 10px 0 0 0 !important;
+  align-self: center !important;
+  color: white !important;
+  background-color: #91c640 !important;
+}

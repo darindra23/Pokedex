@@ -1,0 +1,23 @@
+.link_wrapper {
+  padding: 20px 30px;
+  background-color: #f2f2f3;
+}
+
+.link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid white;
+  border-radius: 7px;
+  height: 40px;
+  background-color: white;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.href {
+  text-decoration: none;
+  color: #8fba2a;
+  font-size: 20px;
+  font-weight: bold;
+}
